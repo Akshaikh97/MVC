@@ -1,0 +1,42 @@
+@model IEnumerable<MVC.Models.Category>
+
+<h1>Category</h1>
+@* <p>
+    <a asp-action="Insert">New Category</a>
+</p> *@
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <td>CategoryId</td>
+            <td>CategoryName</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.CategoryName)
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.ActiveOrNot)
+                    </td>*@
+                @* <td>
+                    @if (item.ActiveOrNot == false)
+                    {
+                        @Html.ActionLink("Activate", "Active", new { CategoryId = item.CategoryId }, new { @class = "btn btn-success" })
+                    }
+                    else
+                    {
+                        @Html.ActionLink("Deactivate", "Deactive", new { CategoryId = item.CategoryId }, new { @class = "btn btn-warning" })
+                    }
+                    @Html.ActionLink("Update", "Update", new { id = item.CategoryId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.CategoryId })
+                </td> *@
+            </tr>
+        }
+    </tbody>
+</table>
