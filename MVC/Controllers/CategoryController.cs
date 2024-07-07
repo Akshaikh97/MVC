@@ -4,6 +4,7 @@ using MVC.Models;
 
 namespace MVC.Controllers
 {
+    [Route("Category")]
     public class CategoryController : Controller
     {
         private readonly Context _context;
