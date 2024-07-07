@@ -1,0 +1,15 @@
+@model MVC.Models.Category
+
+<h1>Update Category</h1>
+
+@using (Html.BeginForm("Update","Category", FormMethod.Post))
+{
+    <div class="form-group">
+        @Html.HiddenFor(x=> x.Id)
+        @Html.LabelFor(x=>x.CategoryName)
+        @Html.TextBoxFor(x=>x.CategoryName, new { @class = "form-control"})
+        @Html.ValidationMessageFor(x => x.CategoryName, "", new { @class = "text-danger" })
+    </div>
+    <button type="submit" class="btn btn-primary">Edit</button>
+    <a href="/Index" class="btn btn-danger">Back</a>
+}
