@@ -37,9 +37,10 @@ namespace MVC.Controllers
             {
                 _context.Category.Add(category);
                 _context.SaveChanges();
-                return RedirectToAction("Index");
+                // return RedirectToAction("Index");
             }
-            return View(category);
+            // return View(category);
+            return RedirectToAction("Index");
         }
         
         // GET: /Category/Update/{id}
