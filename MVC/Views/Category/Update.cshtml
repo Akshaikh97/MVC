@@ -4,6 +4,7 @@
 
 @using (Html.BeginForm("Update","Category", FormMethod.Post))
 {
+    @* @Html.AntiForgeryToken() *@
     <div class="form-group">
         @Html.HiddenFor(x=> x.Id)
         @Html.LabelFor(x=>x.CategoryName)

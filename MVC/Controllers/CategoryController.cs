@@ -7,6 +7,7 @@ namespace MVC.Controllers
     public class CategoryController : Controller
     {
         private readonly Context _context;
+
         public CategoryController(Context context)
         {
             _context = context;

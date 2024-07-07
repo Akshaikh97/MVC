@@ -4,6 +4,7 @@
 
 @using (Html.BeginForm("Insert","Category"))
 {
+    @* @Html.AntiForgeryToken() *@
     <div class="form-group">
         @Html.LabelFor(x=>x.CategoryName)
         @Html.TextBoxFor(x=>x.CategoryName, new { @class = "form-control"})
