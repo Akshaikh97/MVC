@@ -13,7 +13,7 @@
         @Html.HiddenFor(model => model.Id)
         <div class="form-group">
             @Html.DisplayNameFor(model => model.CategoryName)
-            @Html.DisplayFor(model => model.CategoryName)
+           <div class="form-control">@Html.DisplayFor(model => model.CategoryName)</div>
         </div>
         <button type="submit" value="Delete" class="btn btn-primary">Delete</button>
         <a href="/Category/Index" class="btn btn-danger">Back</a>
